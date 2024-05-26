@@ -1,0 +1,166 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 5/25/24, 11:37 PM
+Description: Rendering overlay
+
+java.lang.IllegalAccessError: failed to access class com.mojang.blaze3d.platform.GlStateManager$TextureState from class net.coderbot.iris.gl.IrisRenderSystem$DSAARB (com.mojang.blaze3d.platform.GlStateManager$TextureState is in module minecraft@1.18.2 of loader 'TRANSFORMER' @13ac1657; net.coderbot.iris.gl.IrisRenderSystem$DSAARB is in module oculus@1.6.4 of loader 'TRANSFORMER' @13ac1657)
+	at net.coderbot.iris.gl.IrisRenderSystem$DSAARB.bindTextureToUnit(IrisRenderSystem.java:495) ~[oculus-mc1.18.2-1.6.4.jar%23195!/:?] {re:classloading}
+	at net.coderbot.iris.gl.IrisRenderSystem.bindTextureToUnit(IrisRenderSystem.java:315) ~[oculus-mc1.18.2-1.6.4.jar%23195!/:?] {re:mixin,re:classloading}
+	at net.coderbot.iris.texture.TextureTracker.onSetShaderTexture(TextureTracker.java:55) ~[oculus-mc1.18.2-1.6.4.jar%23195!/:?] {re:mixin,re:classloading}
+	at com.mojang.blaze3d.systems.RenderSystem.handler$znd000$_setShaderTexture(RenderSystem.java:1961) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinGlStateManager,pl:mixin:APP:mixins.oculus.json:MixinRenderSystem,pl:mixin:APP:mixins.oculus.json:statelisteners.MixinRenderSystem,pl:mixin:APP:fpsreducer.mixins.json:RenderSystemMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_SuppressScreenshotBufferFlip,pl:mixin:A}
+	at com.mojang.blaze3d.systems.RenderSystem.m_157179_(RenderSystem.java:1217) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinGlStateManager,pl:mixin:APP:mixins.oculus.json:MixinRenderSystem,pl:mixin:APP:mixins.oculus.json:statelisteners.MixinRenderSystem,pl:mixin:APP:fpsreducer.mixins.json:RenderSystemMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_SuppressScreenshotBufferFlip,pl:mixin:A}
+	at com.mojang.blaze3d.systems.RenderSystem.m_157456_(RenderSystem.java:1209) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinGlStateManager,pl:mixin:APP:mixins.oculus.json:MixinRenderSystem,pl:mixin:APP:mixins.oculus.json:statelisteners.MixinRenderSystem,pl:mixin:APP:fpsreducer.mixins.json:RenderSystemMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_SuppressScreenshotBufferFlip,pl:mixin:A}
+	at net.minecraft.client.gui.screens.LoadingOverlay.m_6305_(LoadingOverlay.java:109) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.m_109093_(GameRenderer.java:879) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:do-a-barrel-roll.mixins.json:GameRendererMixin,pl:mixin:APP:fairylights.mixins.json:GameRendererMixin,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:mixins.oculus.json:MixinTweakFarPlane,pl:mixin:APP:rubidium_extras.mixins.json:TotalDarkness.MixinGameRenderer,pl:mixin:APP:rubidium_extras.mixins.json:Zoom.GameRendererMixin,pl:mixin:APP:mixins.satin.client.json:event.GameRendererMixin,pl:mixin:APP:entity_model_features-common.mixins.json:MixinGameRenderer,pl:mixin:APP:mixins.essential.json:client.renderer.MixinEntityRenderer_Zoom,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:APP:mixins.essential.json:events.Mixin_GuiDrawScreenEvent_Priority,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1046) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dynamiclightsreforged.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium.mixins.json:core.MixinMinecraftClient,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersive_armors.mixins.json:MixinMinecraftClient,pl:mixin:APP:mixin.cleancut.json:MinecraftMixin,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Keybinds,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Images,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:fallingleaves.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium_extras.mixins.json:FrameCounter.FpsAccessorMixin,pl:mixin:APP:extrasounds.mixins.json:hotbar.MinecraftClientMixin,pl:mixin:APP:extrasounds.mixins.json:inventory.MinecraftClientMixin,pl:mixin:APP:puzzleslib.common.mixins.json:client.accessor.MinecraftAccessor,pl:mixin:APP:puzzleslib.forge.mixins.json:client.MinecraftForgeMixin,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:mixins.satin.client.json:event.MinecraftClientMixin,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload,pl:mixin:APP:entity_model_features-common.mixins.json:accessor.MinecraftClientAccessor,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinMinecraftClient,pl:mixin:APP:betterthirdperson.mixins.json:MinecraftMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:blueprint.mixins.json:client.MinecraftMixin,pl:mixin:APP:travelerstitles.mixins.json:MinecraftClientTickMixin,pl:mixin:APP:iceberg.mixins.json:MinecraftMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_RunEssentialTasks,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:mixins.essential.json:compatibility.vanilla.Mixin_WorkaroundBrokenFramebufferBlitBlending,pl:mixin:APP:mixins.essential.json:events.Mixin_RenderTickEvent,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:665) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dynamiclightsreforged.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium.mixins.json:core.MixinMinecraftClient,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersive_armors.mixins.json:MixinMinecraftClient,pl:mixin:APP:mixin.cleancut.json:MinecraftMixin,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Keybinds,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Images,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:fallingleaves.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium_extras.mixins.json:FrameCounter.FpsAccessorMixin,pl:mixin:APP:extrasounds.mixins.json:hotbar.MinecraftClientMixin,pl:mixin:APP:extrasounds.mixins.json:inventory.MinecraftClientMixin,pl:mixin:APP:puzzleslib.common.mixins.json:client.accessor.MinecraftAccessor,pl:mixin:APP:puzzleslib.forge.mixins.json:client.MinecraftForgeMixin,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:mixins.satin.client.json:event.MinecraftClientMixin,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload,pl:mixin:APP:entity_model_features-common.mixins.json:accessor.MinecraftClientAccessor,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinMinecraftClient,pl:mixin:APP:betterthirdperson.mixins.json:MinecraftMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:blueprint.mixins.json:client.MinecraftMixin,pl:mixin:APP:travelerstitles.mixins.json:MinecraftClientTickMixin,pl:mixin:APP:iceberg.mixins.json:MinecraftMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_RunEssentialTasks,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:mixins.essential.json:compatibility.vanilla.Mixin_WorkaroundBrokenFramebufferBlitBlending,pl:mixin:APP:mixins.essential.json:events.Mixin_RenderTickEvent,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$launchService$0(CommonClientLaunchHandler.java:31) ~[fmlloader-1.18.2-40.2.9.jar%2318!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.coderbot.iris.gl.IrisRenderSystem$DSAARB.bindTextureToUnit(IrisRenderSystem.java:495) ~[oculus-mc1.18.2-1.6.4.jar%23195!/:?] {re:classloading}
+	at net.coderbot.iris.gl.IrisRenderSystem.bindTextureToUnit(IrisRenderSystem.java:315) ~[oculus-mc1.18.2-1.6.4.jar%23195!/:?] {re:mixin,re:classloading}
+	at net.coderbot.iris.texture.TextureTracker.onSetShaderTexture(TextureTracker.java:55) ~[oculus-mc1.18.2-1.6.4.jar%23195!/:?] {re:mixin,re:classloading}
+	at com.mojang.blaze3d.systems.RenderSystem.handler$znd000$_setShaderTexture(RenderSystem.java:1961) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinGlStateManager,pl:mixin:APP:mixins.oculus.json:MixinRenderSystem,pl:mixin:APP:mixins.oculus.json:statelisteners.MixinRenderSystem,pl:mixin:APP:fpsreducer.mixins.json:RenderSystemMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_SuppressScreenshotBufferFlip,pl:mixin:A}
+	at com.mojang.blaze3d.systems.RenderSystem.m_157179_(RenderSystem.java:1217) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinGlStateManager,pl:mixin:APP:mixins.oculus.json:MixinRenderSystem,pl:mixin:APP:mixins.oculus.json:statelisteners.MixinRenderSystem,pl:mixin:APP:fpsreducer.mixins.json:RenderSystemMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_SuppressScreenshotBufferFlip,pl:mixin:A}
+	at com.mojang.blaze3d.systems.RenderSystem.m_157456_(RenderSystem.java:1209) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:mixins.oculus.json:MixinGlStateManager,pl:mixin:APP:mixins.oculus.json:MixinRenderSystem,pl:mixin:APP:mixins.oculus.json:statelisteners.MixinRenderSystem,pl:mixin:APP:fpsreducer.mixins.json:RenderSystemMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_SuppressScreenshotBufferFlip,pl:mixin:A}
+	at net.minecraft.client.gui.screens.LoadingOverlay.m_6305_(LoadingOverlay.java:109) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:classloading,pl:runtimedistcleaner:A}
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraft.client.gui.screens.LoadingOverlay
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.m_109093_(GameRenderer.java:879) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:do-a-barrel-roll.mixins.json:GameRendererMixin,pl:mixin:APP:fairylights.mixins.json:GameRendererMixin,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:mixins.oculus.json:MixinTweakFarPlane,pl:mixin:APP:rubidium_extras.mixins.json:TotalDarkness.MixinGameRenderer,pl:mixin:APP:rubidium_extras.mixins.json:Zoom.GameRendererMixin,pl:mixin:APP:mixins.satin.client.json:event.GameRendererMixin,pl:mixin:APP:entity_model_features-common.mixins.json:MixinGameRenderer,pl:mixin:APP:mixins.essential.json:client.renderer.MixinEntityRenderer_Zoom,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:APP:mixins.essential.json:events.Mixin_GuiDrawScreenEvent_Priority,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1046) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dynamiclightsreforged.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium.mixins.json:core.MixinMinecraftClient,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersive_armors.mixins.json:MixinMinecraftClient,pl:mixin:APP:mixin.cleancut.json:MinecraftMixin,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Keybinds,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Images,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:fallingleaves.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium_extras.mixins.json:FrameCounter.FpsAccessorMixin,pl:mixin:APP:extrasounds.mixins.json:hotbar.MinecraftClientMixin,pl:mixin:APP:extrasounds.mixins.json:inventory.MinecraftClientMixin,pl:mixin:APP:puzzleslib.common.mixins.json:client.accessor.MinecraftAccessor,pl:mixin:APP:puzzleslib.forge.mixins.json:client.MinecraftForgeMixin,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:mixins.satin.client.json:event.MinecraftClientMixin,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload,pl:mixin:APP:entity_model_features-common.mixins.json:accessor.MinecraftClientAccessor,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinMinecraftClient,pl:mixin:APP:betterthirdperson.mixins.json:MinecraftMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:blueprint.mixins.json:client.MinecraftMixin,pl:mixin:APP:travelerstitles.mixins.json:MinecraftClientTickMixin,pl:mixin:APP:iceberg.mixins.json:MinecraftMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_RunEssentialTasks,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:mixins.essential.json:compatibility.vanilla.Mixin_WorkaroundBrokenFramebufferBlitBlending,pl:mixin:APP:mixins.essential.json:events.Mixin_RenderTickEvent,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:665) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dynamiclightsreforged.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium.mixins.json:core.MixinMinecraftClient,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersive_armors.mixins.json:MixinMinecraftClient,pl:mixin:APP:mixin.cleancut.json:MinecraftMixin,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Keybinds,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Images,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:fallingleaves.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium_extras.mixins.json:FrameCounter.FpsAccessorMixin,pl:mixin:APP:extrasounds.mixins.json:hotbar.MinecraftClientMixin,pl:mixin:APP:extrasounds.mixins.json:inventory.MinecraftClientMixin,pl:mixin:APP:puzzleslib.common.mixins.json:client.accessor.MinecraftAccessor,pl:mixin:APP:puzzleslib.forge.mixins.json:client.MinecraftForgeMixin,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:mixins.satin.client.json:event.MinecraftClientMixin,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload,pl:mixin:APP:entity_model_features-common.mixins.json:accessor.MinecraftClientAccessor,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinMinecraftClient,pl:mixin:APP:betterthirdperson.mixins.json:MinecraftMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:blueprint.mixins.json:client.MinecraftMixin,pl:mixin:APP:travelerstitles.mixins.json:MinecraftClientTickMixin,pl:mixin:APP:iceberg.mixins.json:MinecraftMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_RunEssentialTasks,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:mixins.essential.json:compatibility.vanilla.Mixin_WorkaroundBrokenFramebufferBlitBlending,pl:mixin:APP:mixins.essential.json:events.Mixin_RenderTickEvent,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$launchService$0(CommonClientLaunchHandler.java:31) ~[fmlloader-1.18.2-40.2.9.jar%2318!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: No
+	Packs: Default, Quark Programmer Art.zip, BetterVillage_IceAndFire_1.18.2.zip, xali's Enhanced Vanilla v1.11.1.zip, xali's Enchanted Books v0.12.0.zip, §bRAY's§r 3D Rails.zip, §bRAY's§r 3D Ladders.zip, EclecticTrove-noconfig-1.18-1.2.0.zip, LowOnFire 1.18+.zip, Better Leaves Addon V2.9-1.19.zip, Better Lanterns and Chains.zip, Glowing Modded Ores V4.zip, STONEBORN - 1.18 - EXTENDED V1.3.zip, STONEBORN - 1.18 - V3.2.1.zip, STONEBORN-+SBMC+-V3.1-Modded-Compatibility.zip, Crops-3D_MC1.18_v1.2.0.zip, miles's Enchanted Weapons sv0.9.zip, miles's Enchanted Tools v3.1.zip, Glowing+Ender+Dragon+1.18.zip, [1.4] Enhanced Boss Bars.zip, Enhanced+Endermans.zip, Better Skeletons.zip, Better_Cats_V0.09.zip, Essential (forge_1.18.2).jar
+Stacktrace:
+	at net.minecraft.client.ResourceLoadStateTracker.m_168562_(ResourceLoadStateTracker.java:49) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,re:classloading,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload_backport,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinResourceReload,pl:mixin:A}
+	at net.minecraft.client.Minecraft.m_91354_(Minecraft.java:2271) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dynamiclightsreforged.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium.mixins.json:core.MixinMinecraftClient,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersive_armors.mixins.json:MixinMinecraftClient,pl:mixin:APP:mixin.cleancut.json:MinecraftMixin,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Keybinds,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Images,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:fallingleaves.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium_extras.mixins.json:FrameCounter.FpsAccessorMixin,pl:mixin:APP:extrasounds.mixins.json:hotbar.MinecraftClientMixin,pl:mixin:APP:extrasounds.mixins.json:inventory.MinecraftClientMixin,pl:mixin:APP:puzzleslib.common.mixins.json:client.accessor.MinecraftAccessor,pl:mixin:APP:puzzleslib.forge.mixins.json:client.MinecraftForgeMixin,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:mixins.satin.client.json:event.MinecraftClientMixin,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload,pl:mixin:APP:entity_model_features-common.mixins.json:accessor.MinecraftClientAccessor,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinMinecraftClient,pl:mixin:APP:betterthirdperson.mixins.json:MinecraftMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:blueprint.mixins.json:client.MinecraftMixin,pl:mixin:APP:travelerstitles.mixins.json:MinecraftClientTickMixin,pl:mixin:APP:iceberg.mixins.json:MinecraftMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_RunEssentialTasks,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:mixins.essential.json:compatibility.vanilla.Mixin_WorkaroundBrokenFramebufferBlitBlending,pl:mixin:APP:mixins.essential.json:events.Mixin_RenderTickEvent,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:682) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:dynamiclightsreforged.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium.mixins.json:core.MixinMinecraftClient,pl:mixin:APP:balm.mixins.json:MinecraftMixin,pl:mixin:APP:immersive_armors.mixins.json:MixinMinecraftClient,pl:mixin:APP:mixin.cleancut.json:MinecraftMixin,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Keybinds,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_Images,pl:mixin:APP:mixins.oculus.json:MixinMinecraft_PipelineManagement,pl:mixin:APP:fallingleaves.mixins.json:MinecraftClientMixin,pl:mixin:APP:rubidium_extras.mixins.json:FrameCounter.FpsAccessorMixin,pl:mixin:APP:extrasounds.mixins.json:hotbar.MinecraftClientMixin,pl:mixin:APP:extrasounds.mixins.json:inventory.MinecraftClientMixin,pl:mixin:APP:puzzleslib.common.mixins.json:client.accessor.MinecraftAccessor,pl:mixin:APP:puzzleslib.forge.mixins.json:client.MinecraftForgeMixin,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:mixins.satin.client.json:event.MinecraftClientMixin,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:APP:entity_model_features-common.mixins.json:MixinResourceReload,pl:mixin:APP:entity_model_features-common.mixins.json:accessor.MinecraftClientAccessor,pl:mixin:APP:entity_texture_features-common.mixins.json:reloading.MixinMinecraftClient,pl:mixin:APP:betterthirdperson.mixins.json:MinecraftMixin,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:blueprint.mixins.json:client.MinecraftMixin,pl:mixin:APP:travelerstitles.mixins.json:MinecraftClientTickMixin,pl:mixin:APP:iceberg.mixins.json:MinecraftMixin,pl:mixin:APP:mixins.essential.json:client.Mixin_RunEssentialTasks,pl:mixin:APP:mixins.essential.json:client.MixinMinecraft,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_FixKeybindUnpressedInEmoteWheel,pl:mixin:APP:mixins.essential.json:client.gui.Mixin_RecalculateMenuScale,pl:mixin:APP:mixins.essential.json:compatibility.forge.Mixin_FixInternalByteBufAccess,pl:mixin:APP:mixins.essential.json:compatibility.vanilla.Mixin_WorkaroundBrokenFramebufferBlitBlending,pl:mixin:APP:mixins.essential.json:events.Mixin_RenderTickEvent,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:205) ~[client-1.18.2-20220404.173914-srg.jar%23270!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$launchService$0(CommonClientLaunchHandler.java:31) ~[fmlloader-1.18.2-40.2.9.jar%2318!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%235!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.1, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 683122880 bytes (651 MiB) / 1258291200 bytes (1200 MiB) up to 8388608000 bytes (8000 MiB)
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 9
+	Microarchitecture: Kaby Lake
+	Frequency (GHz): 3.00
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 4
+	Graphics card #0 name: AMD Radeon RX 6600 XT
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. (0x1002)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x73ff
+	Graphics card #0 versionInfo: DriverVersion=31.0.24027.1012
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.40
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.40
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 27736.55
+	Virtual memory used (MB): 14206.04
+	Swap memory total (MB): 11416.68
+	Swap memory used (MB): 408.12
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx8000m -Xms256m
+	Loaded Shaderpack: (off) (fallback)
+	NEC status: No NEC detected
+	Launched Version: forge-40.2.9
+	Backend library: LWJGL version 3.2.2 SNAPSHOT
+	Backend API: AMD Radeon RX 6600 XT GL version 3.2.0 Core Profile Context 24.3.1.240312, ATI Technologies Inc.
+	Window size: 1024x768
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: vanilla, file/Quark Programmer Art.zip, file/BetterVillage_IceAndFire_1.18.2.zip (incompatible), file/xali's Enhanced Vanilla v1.11.1.zip (incompatible), file/xali's Enchanted Books v0.12.0.zip (incompatible), file/§bRAY's§r 3D Rails.zip (incompatible), file/§bRAY's§r 3D Ladders.zip (incompatible), file/EclecticTrove-noconfig-1.18-1.2.0.zip, file/LowOnFire 1.18+.zip, file/Better Leaves Addon V2.9-1.19.zip (incompatible), file/Better Lanterns and Chains.zip, file/Glowing Modded Ores V4.zip (incompatible), file/STONEBORN - 1.18 - EXTENDED V1.3.zip, file/STONEBORN - 1.18 - V3.2.1.zip, file/STONEBORN-+SBMC+-V3.1-Modded-Compatibility.zip, file/Crops-3D_MC1.18_v1.2.0.zip, file/miles's Enchanted Weapons sv0.9.zip (incompatible), file/miles's Enchanted Tools v3.1.zip (incompatible), file/Glowing+Ender+Dragon+1.18.zip, file/[1.4] Enhanced Boss Bars.zip, file/Enhanced+Endermans.zip, file/Better Skeletons.zip (incompatible), file/Better_Cats_V0.09.zip (incompatible)
+	Current Language: English (US)
+	CPU: 4x Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
+	ModLauncher: 9.1.3+9.1.3+main.9b69c82a
+	ModLauncher launch target: forgeclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 slf4jfixer PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 essential-loader TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+		kotlinforforge@3.12.0
+		lowcodefml@null
+	Mod List: 
+		client-1.18.2-20220404.173914-srg.jar             |Minecraft                     |minecraft                     |1.18.2              |NONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.18.2-40.2.9-universal.jar                 |Forge                         |forge                         |40.2.9              |NONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
